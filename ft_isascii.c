@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandremeekel-konjikovic <alexandreme    +#+  +:+       +#+        */
+/*   By: almeekel <almeekel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 18:08:30 by alexandreme       #+#    #+#             */
-/*   Updated: 2024/10/11 12:59:38 by alexandreme      ###   ########.fr       */
+/*   Updated: 2024/11/06 11:40:14 by almeekel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }

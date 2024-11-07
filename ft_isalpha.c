@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandremeekel-konjikovic <alexandreme    +#+  +:+       +#+        */
+/*   By: almeekel <almeekel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 16:01:53 by alexandreme       #+#    #+#             */
-/*   Updated: 2024/05/15 17:37:54 by alexandreme      ###   ########.fr       */
+/*   Updated: 2024/11/06 10:56:48 by almeekel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    return ((c <= 'z' && c >= 'a' ) || (c <= 'Z' && c >= 'A'));
+	return ((c <= 'z' && c >= 'a' ) || (c <= 'Z' && c >= 'A'));
 }

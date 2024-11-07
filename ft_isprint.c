@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexandremeekel-konjikovic <alexandreme    +#+  +:+       +#+        */
+/*   By: almeekel <almeekel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 00:06:00 by alexandreme       #+#    #+#             */
-/*   Updated: 2024/10/11 13:01:07 by alexandreme      ###   ########.fr       */
+/*   Updated: 2024/11/07 17:24:52 by almeekel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c >= 126);
+	return (c >= 32 && c <= 126);
 }

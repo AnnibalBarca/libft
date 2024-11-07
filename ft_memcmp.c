@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: almeekel <almeekel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 01:25:53 by alexandreme       #+#    #+#             */
-/*   Updated: 2024/11/06 11:40:38 by almeekel         ###   ########.fr       */
+/*   Created: 2024/11/07 15:12:09 by almeekel          #+#    #+#             */
+/*   Updated: 2024/11/07 15:14:35 by almeekel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
-{
-	int	i;
+#include <stddef.h>
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	const unsigned char *p1 = s1;
+	const unsigned char *p2 = s2;
+
+	while (n--)
+	{
+		if (*p1 != *p2)
+			return (*p1 - *p2);
+		p1++;
+		p2++;
+	}
+	return (0);
 }

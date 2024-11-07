@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: almeekel <almeekel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 01:25:53 by alexandreme       #+#    #+#             */
-/*   Updated: 2024/11/06 11:40:38 by almeekel         ###   ########.fr       */
+/*   Created: 2024/11/07 14:58:49 by almeekel          #+#    #+#             */
+/*   Updated: 2024/11/07 15:10:30 by almeekel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
-{
-	int	i;
+#include <ctype.h>
 
+int	ft_atoi(const char *str)
+{
+	int result;
+	int sign;
+	int i;
+
+	result = 0;
+	sign = 1;
 	i = 0;
-	while (s[i] != '\0')
+	while (str[i] != ' ')
 		i++;
-	return (i);
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+		{
+			sign = -sign;
+			i++;
+		}
+    }
+	while (str[i] <= '9' && str[i] >= '0')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
